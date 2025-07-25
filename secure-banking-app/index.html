@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Danger Password App</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="container" id="dashboard">
+    <header>
+      <button class="for-me">For me</button>
+    </header>
+    <div class="greeting">
+      <div class="hello">hello</div>
+      <div class="name">Andile</div>
+    </div>
+  <main>
+  <div class="button-grid" id="buttonGrid">
+    <button class="service-btn"><span class="icon">💡</span> Buy electricity</button>
+    <button class="service-btn"><span class="icon">👥</span> Pay beneficiary</button>
+    <button class="service-btn"><span class="icon">↔️</span> Transfer money</button>
+    <button class="service-btn"><span class="icon">💸</span> Send cash</button>
+    <button class="service-btn"><span class="icon">📱</span> Buy prepaid mobile</button>
+  </div>
+
+  <!-- 🔧 Add these missing cards -->
+  <div id="savingsCard" class="card" style="display: none;">Savings Card</div>
+  <div id="insureCard" class="card" style="display: none;">Insurance Card</div>
+  <div id="liveBetterCard" class="card" style="display: none;">Live Better Card</div>
+
+  <div class="login-section">
+    <button class="login-btn" onclick="showLoginPage()">Login</button>
+  </div>
+
+  <div class="footer-text">
+    This is a student project for educational purposes only. It is not affiliated with Capitec Bank or any real financial institution.
+  </div>
+</main>
+
+  </div>
+
+  <div class="container" id="loginPage" style="display: none;">
+    <header>
+      <div class="back-btn"></div>
+      <button class="for-me">For me</button>
+    </header>
+    <div class="login-content">
+      <div class="logo">Global<span class="one">One</span></div>
+      <div class="pin-section">
+        <label for="pin">Enter Remote PIN</label>
+        <input type="password" id="pin" maxlength="4" placeholder="____" required />
+        <a href="#" class="forgot-pin">Forgot PIN</a>
+      </div>
+      <button class="submit-btn" onclick="login()">Submit</button>
+      <div class="footer-text">
+        This is a student project for educational purposes only. It is not affiliated with Capitec Bank or any real financial institution.
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

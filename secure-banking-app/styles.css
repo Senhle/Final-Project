@@ -1,0 +1,499 @@
+/* Existing global styles (unchanged for other pages) */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f0f0f0 url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAFElEQVQIW2NkYGD4z0AswKABXAGEmKgcmrgYrIyYGBgYGBhSAAKCBjA5IAiU1KAABTwJ/Ev9OaRAAAAABJRU5ErkJggg==') repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 400px;
+    width: 100%;
+    height: 100vh;
+    flex-direction: column;
+    background: #fff;
+}
+
+#dashboard {
+    display: flex;
+}
+
+#loginPage {
+    display: none;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+.for-me {
+    background-color: #00aaff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.back-btn {
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.greeting {
+    text-align: center;
+    padding: 20px;
+}
+
+.hello {
+    font-size: 60px;
+    color: red;
+    font-weight: bold;
+    position: relative;
+    text-transform: uppercase;
+}
+
+.name {
+    font-size: 24px;
+    color: #333;
+    margin-top: 10px;
+}
+
+main {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.button-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    padding: 20px;
+}
+
+.service-btn {
+    background-color: white;
+    border: none;
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    font-size: 14px;
+}
+
+.service-btn .icon {
+    display: block;
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+.login-section {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.login-btn {
+    background-color: #00aaff;
+    color: white;
+    border: none;
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.login-content {
+    text-align: center;
+    padding: 20px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.logo {
+    font-size: 48px;
+    color: #0066cc;
+    margin-bottom: 20px;
+}
+
+.logo .one {
+    color: #00aaff;
+}
+
+.pin-section {
+    margin-bottom: 20px;
+}
+
+.pin-section label {
+    display: block;
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.pin-section input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    text-align: center;
+    letter-spacing: 5px;
+}
+
+.pin-section .forgot-pin {
+    display: block;
+    font-size: 14px;
+    color: #00aaff;
+    text-decoration: none;
+    margin-top: 10px;
+}
+
+.submit-btn {
+    background-color: #00aaff;
+    color: white;
+    border: none;
+    padding: 15px;
+    border-radius: 10px;
+    width: 100%;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.footer-text {
+    font-size: 12px;
+    color: #666;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.show {
+    display: flex !important;
+}
+
+.container {
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+}
+
+.dashboard-header {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 1rem;
+    background: #0073e6;
+    color: white;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.card {
+    background: #f9f9f9;
+    border-radius: 12px;
+    padding: 1rem;
+    width: 100%;
+    margin-bottom: 1rem;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.nav-bar {
+    display: flex;
+    justify-content: space-around;
+    position: fixed;
+    bottom: 0;
+    background: #fff;
+    width: 100%;
+    border-top: 1px solid #ccc;
+    padding: 0.5rem 0;
+}
+
+@media (min-width: 768px) {
+    .container {
+        max-width: 600px;
+    }
+}
+
+/* Dashboard-specific styles (updated to fix single-line issue) */
+header {
+    background: #00aaff;
+    color: white;
+    padding: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    position: relative;
+}
+
+header .profile-icon {
+    width: 30px;
+    height: 30px;
+    background: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+header .call-icon {
+    width: 30px;
+    height: 30px;
+    background: none;
+}
+
+.dashboard-title {
+    font-size: 18px;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    background: #f9f9f9;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.edit-btn {
+    color: #00aaff;
+    font-size: 14px;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.container { /* Enforce vertical stacking */
+    display: flex;
+    flex-direction: column; /* Ensure sections stack vertically */
+    padding: 0; /* Reset padding to avoid extra space */
+    width: 100%; /* Ensure full width */
+    box-sizing: border-box; /* Include padding in width calculation */
+}
+
+.section {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    margin: 10px 0; /* Vertical margin for stacking */
+    border-radius: 10px;
+    font-size: 16px;
+    position: relative;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 100%; /* Ensure full width */
+    background: #fff; /* Match card background */
+    justify-content: space-between; /* Align title and balance */
+}
+
+.section .title {
+    font-weight: bold;
+    margin-right: 10px;
+    color: #1a73e8; /* Dark blue for titles */
+}
+
+.section .desc {
+    color: #555;
+    flex-grow: 1; /* Allow desc to take available space */
+}
+
+.section .icon {
+    width: 24px;
+    height: 24px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-right: 10px;
+    display: none; /* Hide icons to match new image */
+}
+
+/* Specific section styling */
+#mainBalance {
+    margin-left: 10px;
+    font-weight: bold;
+    color: #1a73e8;
+}
+
+#savingsSection {
+    background: #e6f0fa; /* Light blue background */
+}
+
+#insuranceSection {
+    background: #f0f0f0; /* Gray background */
+}
+
+#insuranceSection .close-btn {
+    position: absolute;
+    right: 10px;
+    color: #00aaff;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+#liveBetterSection {
+    background: #f9e6ff; /* Purple background */
+}
+
+#liveBetterSection .new-tag {
+    background: #d32f2f;
+    color: white;
+    padding: 2px 8px;
+    border-radius: 10px;
+    font-size: 12px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.add-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    margin: 10px 0;
+    background: #fff;
+    border: 2px dashed #00aaff;
+    border-radius: 10px;
+    color: #00aaff;
+    font-size: 16px;
+    cursor: pointer;
+    width: 100%;
+}
+
+.add-btn .plus-icon {
+    margin-right: 5px;
+}
+
+.nav-bar {
+    display: flex;
+    justify-content: space-around;
+    background: #fff;
+    padding: 10px 0;
+    border-top: 1px solid #ddd;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    max-width: 400px;
+}
+
+.nav-bar div {
+    text-align: center;
+    font-size: 12px;
+    color: #666;
+}
+
+.nav-bar div.active {
+    color: #00aaff;
+}
+
+@media (min-width: 768px) {
+    .container {
+        max-width: 600px;
+    }
+}
+/* Body setup */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f5f5f5;
+}
+
+/* ✅ HEADER STYLES */
+header {
+  font-size: 26px;
+  font-weight: bold;
+  padding: 20px;
+  background: white;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.highlight {
+  color: #2caae1;
+}
+
+/* Container for all sections */
+.container {
+  max-width: 400px;
+  margin: 0 auto;
+  padding-bottom: 80px; /* For bottom nav */
+}
+
+/* Section styling */
+.section {
+  background: white;
+  margin: 10px 0;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+  display: block;
+  width: 100%;
+}
+
+.title {
+  font-weight: bold;
+  font-size: 18px;
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.desc {
+  color: #555;
+  display: inline-block;
+}
+
+/* Colored Sections */
+#savingsSection { background: #e6f0fa; }
+#insuranceSection { background: #f0f0f0; }
+#liveBetterSection { background: #f9e6ff; }
+
+/* Bottom nav */
+nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: white;
+  display: flex;
+  justify-content: space-around;
+  padding: 10px 0;
+  border-top: 1px solid #ccc;
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+nav div {
+  text-align: center;
+  font-size: 12px;
+}
+
+/* Responsive layout for larger screens */
+@media (min-width: 768px) {
+  .container {
+    max-width: 600px;
+  }
+}
+
+/* ✨ GLOBAL HEADER STYLES (Fixed to show at top) */
+.global-header {
+  font-size: 26px;
+  font-weight: bold;
+  padding: 20px;
+  background: white;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  z-index: 1000;
+  position: relative;
+}
+
+.global-header .highlight {
+  color: #2caae1;
+}
