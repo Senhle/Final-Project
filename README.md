@@ -80,3 +80,4 @@ Feel free to explore and modify it.
 ---
 
 *Created by Andile Gracious Dhlamini*
+[![Live Demo](https://img.shields.io/badge/Live-Demo-blue?style=for-the-badge&logo=github)](https://senhle.github.io/Final-Project/secure-banking-app/)
