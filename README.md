@@ -1,3 +1,6 @@
+[![Live Demo](https://img.shields.io/badge/Live-Demo-blue?style=for-the-badge&logo=github)](https://senhle.github.io/Final-Project/secure-banking-app/)
+
+
 # GlobalOne Secure Banking App
 
 ## Overview
